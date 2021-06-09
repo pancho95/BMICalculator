@@ -1,0 +1,42 @@
+.card-item{
+    background-color: #FF111328;
+    height: 120px;
+    border-radius: 20px;
+    color:white;
+}
+
+.sex-person{
+    font-size: 40px;
+}
+
+.sex-active{
+    border:2px solid #FF3366;
+}
+
+.style-number{
+    font-size:32px;
+    font-weight: 800;
+    margin-top: -30px;
+}
+
+.cms{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -10px;
+}
+
+.custom-range{
+    padding: 0px 20px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    background:#FF3366;
+}
+
+.btn-option{
+    font-size:20px;
+    background-color:orangered;
+    color:white;
+    border-radius: 50%;
+    margin-left: 4px;
+}

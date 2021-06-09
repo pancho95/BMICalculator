@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+            <h2 class="title">CALCULADORA (IMC)</h2>
+            <div class="row">
+                <div class="col-6 col-lg-6">
+                    <div class="card-item" [ngClass]="{'sex-active': sex_person === 'Masculino'}">
+                        <div class="card-container" style="cursor:pointer;" (click)="setMale()">
+                            <i class="fas fa-mars sex-person"></i>
+                            <p>Masculino</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6">
+                    <div class="card-item" [ngClass]="{'sex-active': sex_person === 'Femenino'}">
+                        <div class="card-container" style="cursor:pointer;" (click)="setFemale()">
+                            <i class="fas fa-venus sex-person"></i>
+                            <p>Femenino</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="card-item">
+                        <div class="card-container">
+                            <p>Altura</p>
+                            <div class="style-number"> {{height}}
+                                <span class="cms">cm</span>
+                            </div>
+                            <input [(ngModel)]="height" type="range" min=110 max=210 class="custom-range">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-lg-6">
+                    <div class="card-item">
+                        <div class="card-container">
+                            <p>weight(kg)</p>
+                            <div class="style-number"> {{weight}}
+                            </div>
+                            <div>
+                                <button (click)="reduceWeight()" class="btn-option">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button (click)="addWeight()" class="btn-option">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6">
+                    <div class="card-item">
+                        <div class="card-container">
+                            <p>Edad</p>
+                            <div class="style-number"> {{age}}
+                            </div>
+                            <div>
+                                <button (click)="reduceAge()" class="btn-option">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button (click)="addAge()" class="btn-option">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 mx-auto col-lg-12">
+                    <button (click)="calculateBMI()"
+                        class="btn btn-primary btn-lg btn-block btn-color">CALCULAR</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
